@@ -1,0 +1,11 @@
+body {
+  background-color: transparent;
+  background-image: linear-gradient(
+      rgba(88, 93, 101, 0.2726),
+      rgba(55, 62, 80, 0.5762)
+    ),
+    url("../background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}

@@ -1,0 +1,280 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("../fonts-regal/fonts.css");
+
+/**********************************Variables*************************/
+$bg-light: #373e50;
+$bg-lighter: #585d65;
+$bg-lightest: #448d96;
+$color-white: #fff;
+$color-black: #000;
+$gradient-light: #585d65;
+$gradient-dark: #373e50;
+$link-color: #448d96;
+$modal-subheading: #212529;
+$home-btn-border: #468f99;
+$normal-bg: #3a7c85;
+$text-color-primary: #373e50;
+
+/******************************End Variables*************************/
+
+/******************************Body Styles***************************/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.body-container {
+  // max-width: 950px;
+  // width: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  // text-align: center;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "gibsonlight", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  background-color: transparent;
+  background-image: linear-gradient(
+      rgba(88, 93, 101, 0.2726),
+      rgba(55, 62, 80, 0.5762)
+    ),
+    url("../Regal_Blue_Splice.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.h2,
+.h3 {
+  font-weight: 700;
+  color: $color-white;
+}
+
+header,
+footer,
+main {
+  background: transparent;
+}
+/**************************End Body Styles***************************/
+
+/************************FixedTop Section****************************/
+
+.corner-top-right {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-image: radial-gradient(
+    circle at top left,
+    $gradient-light,
+    $gradient-dark
+  );
+
+  // clip-path: polygon(
+  //   0% 0%,
+  //   100% 0%,
+  //   100% 75%,
+  //   75% 75%,
+  //   75% 100%,
+  //   50% 75%,
+  //   0% 75%
+  // );
+
+  color: $color-white;
+  border-bottom-left-radius: 12px;
+  box-shadow: 0 1px 8px rgba($color-black, 0.6);
+  padding: 1rem;
+}
+
+// .assistance-header {
+//   margin: 0.25rem;
+//   padding: 0.125rem;
+//   font-weight: 300;
+//   font-size: 1.527rem;
+//   float: right;
+//   letter-spacing: 0.5rem;
+// }
+
+// .telephone-header {
+//   margin: 0.25rem;
+//   padding: 0.125rem;
+//   padding-bottom: 2.5271rem;
+//   font-weight: 100;
+//   letter-spacing: 0.25rem;
+// }
+
+@media (max-width: 800px) {
+  .corner-top-right {
+    display: none;
+  }
+}
+
+/********************End FixedTop Section****************************/
+
+/********************Header Section**********************************/
+
+header {
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  // gap: 0.275rem;
+
+  // width: 90%;
+  // max-width: 50rem;
+  // margin: 0 auto 2rem auto;
+
+  // text-align: center;
+  // background: rgba($bg-light, 1);
+  // padding: 1rem;
+  // border-bottom-right-radius: 12px;
+  // border-bottom-left-radius: 12px;
+  color: rgba($color-white, 0.8);
+  // box-shadow: 0 1px 8px rgba($color-black, 0.6);
+}
+
+.logo-img {
+  background-image: url("../regal_logo_inverted.png");
+  // width: 535px; /*100%*/
+  // height: 135px; /*100%*/
+  display: block;
+  background-repeat: no-repeat;
+  // background-position: center;
+  // background-size: cover;
+  cursor: pointer;
+  padding: 55px;
+}
+
+// @media (max-width: 768px) {
+//   .logo-img {
+//     padding: 55px;
+//   }
+// }
+
+// img {
+//   width: 100%;
+//   object-fit: contain;
+//   cursor: pointer;
+// }
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+h1 {
+  // font-size: 1rem;
+  font-weight: 100;
+}
+
+@media (min-width: 768px) {
+  // header {
+  //   padding: 2rem;
+  // }
+
+  h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 2rem;
+    font-weight: 300;
+    text-shadow: 1px 1px $color-black;
+  }
+}
+/********************End Header Section******************************/
+
+/********************Main Body Section*******************************/
+.btn-secondary {
+  font-family: "gibsonlight", sans-serif;
+}
+
+/********************End main Body Section***************************/
+
+/********************Footer Section**********************************/
+
+footer {
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  // width: 90%;
+  // max-width: 50rem;
+  // margin-top: auto;
+  // margin-right: auto;
+  // margin-bottom: 0;
+  // margin-left: auto;
+  text-align: center;
+  // background: rgba($bg-light, 1); /* fallback for old browsers */
+  // background: -webkit-linear-gradient(
+  //   to right,
+  //   $bg-light,
+  //   $bg-lighter
+  // ); /* Chrome 10-25, Safari 5.1-6 */
+  // background: linear-gradient(
+  //   to right,
+  //   $bg-light,
+  //   $bg-lighter
+  // ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  padding-top: 1rem;
+  // border-top-right-radius: 12px;
+  // border-top-left-radius: 12px;
+  // box-shadow: 0 1px 8px rgba($color-black, 0.6);
+}
+
+// .footer-img {
+//   // background-image: url("../public/assets/regal_logo_inverted.png");
+//   width: 50%;
+//   height: 25%;
+//   object-fit: contain;
+// }
+
+.copyright {
+  display: inline-flex;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+p a {
+  margin: 0;
+  padding: 0;
+  font-weight: 100px;
+  cursor: pointer;
+  font-size: 1rem;
+  color: $color-white;
+  font-weight: 100;
+  text-decoration: none;
+  // border-bottom: 1px solid $bg-lightest;
+  padding-bottom: 1px;
+}
+
+@media (max-width: 600px) {
+  p a {
+    margin: 0;
+    padding: 0;
+    // font-size: 1.4rem;
+    font-weight: 300;
+  }
+}
+
+@media (min-width: 768px) {
+  p a {
+    margin: 0;
+    padding: 0;
+    // font-size: 1.6rem;
+    font-weight: 300;
+  }
+}
+
+/********************Footer Section**********************************/
