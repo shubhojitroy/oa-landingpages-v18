@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-@import url("../fonts-regal/fonts.css");
+@import url("../fonts/fonts-regal/fonts.css");
 
 /**********************************Variables*************************/
 $bg-light: #373e50;
@@ -51,7 +51,7 @@ body {
       rgba(88, 93, 101, 0.2726),
       rgba(55, 62, 80, 0.5762)
     ),
-    url("../Regal_Blue_Splice.jpg");
+    url("../images/images-regal/Regal_Blue_Splice.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -145,7 +145,7 @@ header {
 }
 
 .logo-img {
-  background-image: url("../regal_logo_inverted.png");
+  background-image: url("../images/images-regal/regal_logo_inverted.png");
   // width: 535px; /*100%*/
   // height: 135px; /*100%*/
   display: block;
