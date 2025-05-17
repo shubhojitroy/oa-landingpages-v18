@@ -18,27 +18,27 @@ $text-color-primary: #373e50;
 /******************************End Variables*************************/
 
 /******************************Body Styles***************************/
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+// *,
+// *::before,
+// *::after {
+//   margin: 0;
+//   padding: 0;
+//   box-sizing: border-box;
+// }
 
-.body-container {
-  // max-width: 950px;
-  // width: 100%;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  // text-align: center;
-  margin: 0 auto;
-  height: 100vh;
-}
+// .body-container {
+//   // max-width: 950px;
+//   // width: 100%;
+//   display: grid;
+//   grid-template-rows: auto 1fr auto;
+//   // text-align: center;
+//   margin: 0 auto;
+//   height: 100vh;
+// }
 
-html {
-  font-size: 16px;
-}
+// html {
+//   font-size: 16px;
+// }
 
 body {
   font-family: "gibsonlight", sans-serif;
@@ -92,9 +92,9 @@ main {
   //   0% 75%
   // );
 
-  color: $color-white;
+  color: #fff;
   border-bottom-left-radius: 12px;
-  box-shadow: 0 1px 8px rgba($color-black, 0.6);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
   padding: 1rem;
 }
 
@@ -176,6 +176,7 @@ header {
 h1 {
   // font-size: 1rem;
   font-weight: 100;
+  color: $color-white;
 }
 
 @media (min-width: 768px) {
