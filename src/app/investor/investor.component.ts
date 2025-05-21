@@ -29,18 +29,39 @@ export class InvestorComponent implements OnInit, OnDestroy {
       this.renderer.removeChild(document.head, existingLink);
     }
 
-    // Create new link element
-    const link = this.renderer.createElement('link');
-    this.renderer.setAttribute(link, 'rel', 'stylesheet');
-    this.renderer.setAttribute(link, 'id', this.themeLinkId);
-    this.renderer.setAttribute(
-      link,
-      'href',
-      `assets/themes/theme-${theme}.scss`
-    ); // Assumes file in `assets/themes/
+    //Issuer array of objects
+    const issuers = [
+      { id: 1, name: 'regal', issuerid: 'vdno' },
+      { id: 2, name: 'regal-funds-management', issuerid: 'vdno' },
+      { id: 3, name: 'boardroom', issuerid: 'zzzz' },
+      { id: 4, name: 'boardroomlimited', issuerid: 'zzzz' },
+      { id: 5, name: 'wam', issuerid: 'zlwq' },
+      { id: 6, name: 'wam-global', issuerid: 'zlwq' },
+      { id: 7, name: 'realm', issuerid: 'trev' },
+      { id: 8, name: 'realm-investment-house', issuerid: 'trev' },
+    ];
+    //define a constant id is new client and value is theme.is add client
+    // Mapping names of clients to issuer id
+    // Find the issuerId that matches the brand name.
+    const issuerId = issuers.find(
+      (i) => i.name === theme.toLocaleLowerCase()
+    )?.issuerid;
 
-    // Append to head
-    this.renderer.appendChild(document.head, link);
+    // If issuerId exists, then create the stylesheet link element
+    if (issuerId) {
+      // Create new link element
+      const link = this.renderer.createElement('link');
+      this.renderer.setAttribute(link, 'rel', 'stylesheet');
+      this.renderer.setAttribute(link, 'id', this.themeLinkId);
+      this.renderer.setAttribute(
+        link,
+        'href',
+        `assets/themes/theme-${issuerId}.scss`
+      ); // Assumes file in `assets/themes/
+
+      // Append to head
+      this.renderer.appendChild(document.head, link);
+    }
   }
 
   // concerned about the theme lingering after navigating away, implement OnDestroy
